@@ -34,7 +34,7 @@ This software solves the problem using the following logic:
 ### HTTP Endpoints
 
 - GET `/alive` returns 200 by default and 503 if the service is shutting down (if `timeout_shutdown` setting is > 0)
-- POST `/push` receives metrics from Prometheus - configure remote write to send here
+- POST `/api/v1/push` receives metrics from Prometheus - configure remote write to send here
 
 ### Configuration
 
@@ -142,7 +142,7 @@ tenant:
 ```yaml
 remote_write:
   - name: cortex_tenant
-    url: http://127.0.0.1:8080/push
+    url: http://127.0.0.1:8080/api/v1/push
 
 scrape_configs:
   - job_name: job1
