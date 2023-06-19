@@ -275,7 +275,7 @@ func Test_handle(t *testing.T) {
 	resp := fh.AcquireResponse()
 
 	req.Header.SetMethod("POST")
-	req.SetRequestURI("http://127.0.0.1/push")
+	req.SetRequestURI("http://127.0.0.1/api/v1/push")
 	req.SetBody(wrq1)
 
 	err = c.Do(req, resp)
@@ -289,7 +289,7 @@ func Test_handle(t *testing.T) {
 	resp.Reset()
 
 	req.Header.SetMethod("POST")
-	req.SetRequestURI("http://127.0.0.1/push")
+	req.SetRequestURI("http://127.0.0.1/api/v1/push")
 	req.SetBody(wrq1)
 
 	err = c.Do(req, resp)
@@ -303,7 +303,7 @@ func Test_handle(t *testing.T) {
 	resp.Reset()
 
 	req.Header.SetMethod("POST")
-	req.SetRequestURI("http://127.0.0.1/push")
+	req.SetRequestURI("http://127.0.0.1/api/v1/push")
 	req.SetBody(wrq4)
 
 	err = c.Do(req, resp)
@@ -316,7 +316,7 @@ func Test_handle(t *testing.T) {
 	resp.Reset()
 
 	req.Header.SetMethod("POST")
-	req.SetRequestURI("http://127.0.0.1/push")
+	req.SetRequestURI("http://127.0.0.1/api/v1/push")
 	req.SetBody(wrq3)
 
 	err = c.Do(req, resp)
@@ -329,7 +329,7 @@ func Test_handle(t *testing.T) {
 	resp.Reset()
 
 	req.Header.SetMethod("POST")
-	req.SetRequestURI("http://127.0.0.1/push")
+	req.SetRequestURI("http://127.0.0.1/api/v1/push")
 	req.SetBody([]byte("foobar"))
 
 	err = c.Do(req, resp)
@@ -342,7 +342,7 @@ func Test_handle(t *testing.T) {
 	resp.Reset()
 
 	req.Header.SetMethod("POST")
-	req.SetRequestURI("http://127.0.0.1/push")
+	req.SetRequestURI("http://127.0.0.1/api/v1/push")
 	req.SetBody(snappy.Encode(nil, []byte("foobar")))
 
 	err = c.Do(req, resp)
@@ -357,7 +357,7 @@ func Test_handle(t *testing.T) {
 	resp.Reset()
 
 	req.Header.SetMethod("POST")
-	req.SetRequestURI("http://127.0.0.1/push")
+	req.SetRequestURI("http://127.0.0.1/api/v1/push")
 	req.SetBody(wrq1)
 
 	err = c.Do(req, resp)
