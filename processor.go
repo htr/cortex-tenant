@@ -156,7 +156,7 @@ func (p *processor) handle(ctx *fh.RequestCtx) {
 		return
 	}
 
-	if !bytes.Equal(ctx.Path(), []byte("/push")) {
+	if !bytes.Equal(ctx.Path(), []byte("/api/v1/push")) {
 		ctx.SetStatusCode(fh.StatusNotFound)
 		return
 	}
